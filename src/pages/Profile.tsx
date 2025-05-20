@@ -7,8 +7,8 @@ import Navbar from "@/components/Navbar";
 const Profile = () => {
  // Dummy data
   const userData = {
-    name: "Alex Johnson",
-    email: "alex@example.com",
+    name: "User Name",
+    email: "user@example.com",
     avatarUrl: "",
     plan: "Pro",
     tracksCreated: 24,
