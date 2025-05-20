@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,6 +62,13 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
+				},
+				music: {
+					purple: '#6b46c1',
+					blue: '#3182ce',
+					gold: '#d69e2e',
+					dark: '#1a202c',
+					light: '#f7fafc'
 				}
 			},
 			borderRadius: {
@@ -84,11 +92,30 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'pulse-subtle': {
+					'0%, 100%': { opacity: 1 },
+					'50%': { opacity: 0.8 }
+				},
+				'fade-in': {
+					'0%': { opacity: 0, transform: 'translateY(10px)' },
+					'100%': { opacity: 1, transform: 'translateY(0)' }
+				},
+				'wave': {
+					'0%': { transform: 'scaleY(0.2)' },
+					'50%': { transform: 'scaleY(1)' },
+					'100%': { transform: 'scaleY(0.2)' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'pulse-subtle': 'pulse-subtle 2s ease-in-out infinite',
+				'fade-in': 'fade-in 0.3s ease-out',
+				'wave-1': 'wave 1.2s linear infinite',
+				'wave-2': 'wave 1.2s linear infinite 0.2s',
+				'wave-3': 'wave 1.2s linear infinite 0.4s',
+				'wave-4': 'wave 1.2s linear infinite 0.6s'
 			}
 		}
 	},
