@@ -88,7 +88,7 @@ const Register = () => {
               </div>
             </div>
             <h1 className="text-3xl font-bold mb-2">Create an account</h1>
-            <p className="text-muted-foreground">Sign up to get started with SoundSynth</p>
+            <p className="text-muted-foreground">Sign up to get started with Music generator</p>
           </div>
           
           <Card className="border-border/50">
@@ -104,7 +104,7 @@ const Register = () => {
                   </label>
                   <Input
                     id="name"
-                    placeholder="John Doe"
+                    placeholder="Ram Bahadur Limbu"
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     required
@@ -118,7 +118,7 @@ const Register = () => {
                   <Input
                     id="email"
                     type="email"
-                    placeholder="your.email@example.com"
+                    placeholder="abc.email@example.com"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     required
@@ -132,7 +132,7 @@ const Register = () => {
                   <Input
                     id="password"
                     type="password"
-                    placeholder="Create a secure password"
+                    placeholder="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required

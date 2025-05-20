@@ -16,7 +16,7 @@ export default function Navbar() {
             <Music size={20} />
           </div>
           <span className="text-xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-music-purple to-music-blue">
-            SoundSynth
+          Music generator
           </span>
           <div className="hidden md:flex gap-1 ml-1">
             <div className="music-wave h-3 animate-wave-1"></div>
