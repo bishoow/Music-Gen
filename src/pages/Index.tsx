@@ -26,51 +26,6 @@ const Index = () => {
     }
   ];
 
-  const plans = [
-    {
-      name: "Free",
-      price: "$0",
-      period: "forever",
-      features: [
-        "5 music generations per day",
-        "Basic genres",
-        "MP3 exports",
-        "15-second clips"
-      ],
-      buttonText: "Get Started",
-      buttonVariant: "outline"
-    },
-    {
-      name: "Pro",
-      price: "$9.99",
-      period: "per month",
-      features: [
-        "Unlimited generations",
-        "All genres and styles",
-        "MP3 & WAV exports",
-        "Up to 3-minute tracks",
-        "Priority support"
-      ],
-      buttonText: "Go Pro",
-      buttonVariant: "default",
-      highlight: true
-    },
-    {
-      name: "Studio",
-      price: "$19.99",
-      period: "per month",
-      features: [
-        "Everything in Pro",
-        "MIDI exports",
-        "Stem separation",
-        "Commercial license",
-        "API access"
-      ],
-      buttonText: "Get Studio",
-      buttonVariant: "outline"
-    }
-  ];
-
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -180,61 +135,6 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Pricing Section */}
-      <section id="pricing" className="py-16">
-        <div className="container px-4 mx-auto">
-          <div className="text-center max-w-2xl mx-auto mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Simple, Transparent Pricing</h2>
-            <p className="text-muted-foreground">
-              Choose the plan that fits your creative needs, from casual experimentation
-              to professional production.
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {plans.map((plan, index) => (
-              <div 
-                key={index} 
-                className={`border rounded-xl p-6 relative overflow-hidden transition-all duration-200 ${
-                  plan.highlight 
-                  ? 'shadow-lg border-music-purple' 
-                  : 'hover:shadow-md hover:border-border/80'
-                }`}
-              >
-                {plan.highlight && (
-                  <div className="absolute top-0 right-0 bg-music-purple text-white text-xs font-bold px-3 py-1 rounded-bl-lg">
-                    MOST POPULAR
-                  </div>
-                )}
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold mb-2">{plan.name}</h3>
-                  <div className="flex items-baseline">
-                    <span className="text-3xl font-bold">{plan.price}</span>
-                    <span className="text-muted-foreground ml-2">{plan.period}</span>
-                  </div>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  {plan.features.map((feature, i) => (
-                    <li key={i} className="flex items-center">
-                      <Check className="h-4 w-4 mr-3 text-music-purple" />
-                      <span>{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-                <Link to="/register">
-                  <Button 
-                    variant={plan.buttonVariant as "default" | "outline"} 
-                    className={`w-full ${plan.highlight ? 'bg-music-purple hover:bg-music-purple/90' : ''}`}
-                  >
-                    {plan.buttonText}
-                  </Button>
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-      
       {/* Footer */}
       <footer className="bg-music-dark text-white py-12">
         <div className="container px-4 mx-auto">
@@ -257,7 +157,6 @@ const Index = () => {
                 <h4 className="font-medium mb-4">Product</h4>
                 <ul className="space-y-2">
                   <li><a href="#" className="text-white/70 hover:text-white transition-colors text-sm">Features</a></li>
-                  <li><a href="#" className="text-white/70 hover:text-white transition-colors text-sm">Pricing</a></li>
                   <li><a href="#" className="text-white/70 hover:text-white transition-colors text-sm">Testimonials</a></li>
                   <li><a href="#" className="text-white/70 hover:text-white transition-colors text-sm">API</a></li>
                 </ul>
